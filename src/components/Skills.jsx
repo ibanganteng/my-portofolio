@@ -30,7 +30,7 @@ export default function Skills() {
                 value={skillLevels[skill]}
                 className="w-full h-2 bg-blue-700 rounded-lg appearance-none cursor-pointer"
                 style={{
-                  background: `linear-gradient(to right, blue ${skillLevels[skill]}%, yellow ${skillLevels[skill]}%)`,
+                  background: `linear-gradient(to right, blue ${skillLevels[skill]}%, pink ${skillLevels[skill]}%)`,
                   accentColor: "#1E40AF",
                 }}
               />
