@@ -2,7 +2,7 @@
 
 import Skills from "./Skills";
 
-const PDF_FILE_URL = "http://localhost:3000/file_pdf.pdf";
+const PDF_FILE_URL = "file_pdf.pdf";
 
 export default function Hero() {
   const downloadFileURL = (url) => {
