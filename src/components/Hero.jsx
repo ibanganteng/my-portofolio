@@ -12,7 +12,7 @@ export default function Hero() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const strings = ["Mochammad Ridwan", " Full Stack Developer"];
+  const strings = ["Mochammad Ridwan", " Full-Stack Developer"];
 
   useEffect(() => {
     let timer;
@@ -52,7 +52,7 @@ export default function Hero() {
     >
       <div className="container mx-auto h-full sm:flex sm:items-center">
         <div className="text-left w-full md:w-2/3 lg:w-1/2 px-10 mr-20">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-3xl md:text-4xl font-bold">
             Hello! I'm{" "}
             <span
               className="bg-gradient-to-r from-blue-400 to-[#a2a2c5] text-white"
