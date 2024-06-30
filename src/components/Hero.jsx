@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Skills from "./Skills";
 
-const PDF_FILE_URL = "/file_pdf.pdf";
+// const PDF_FILE_URL = "/file_pdf.pdf";
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("");
@@ -35,15 +35,15 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [index, isDeleting, loopNum, typingSpeed]);
 
-  const downloadFileURL = (url) => {
-    const fileName = url.split("/").pop();
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", fileName);
-    document.body.appendChild(aTag);
-    aTag.click();
-    document.body.removeChild(aTag);
-  };
+  // const downloadFileURL = (url) => {
+  //   const fileName = url.split("/").pop();
+  //   const aTag = document.createElement("a");
+  //   aTag.href = url;
+  //   aTag.setAttribute("download", fileName);
+  //   document.body.appendChild(aTag);
+  //   aTag.click();
+  //   document.body.removeChild(aTag);
+  // };
 
   return (
     <section
@@ -67,7 +67,7 @@ export default function Hero() {
           </p>
           <button
             className="mt-6 btn bg-[#2E2E5C] text-white"
-            onClick={() => downloadFileURL(PDF_FILE_URL)}
+            // onClick={() => downloadFileURL(PDF_FILE_URL)}
           >
             Click for MY CV
           </button>
