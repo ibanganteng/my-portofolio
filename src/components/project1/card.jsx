@@ -2,17 +2,18 @@ import React from "react";
 
 export default function Card() {
   return (
-    <div className=" flex gap-8 justify-center items-center">
+    <div
+      id="service"
+      className="flex flex-col md:flex-row gap-8 justify-center items-center bg-gradient-to-r from-[#4E5F4F] to-[#e6e4dd] py-10 px-4
+    "
+    >
       <div className="card card-compact bg-base-100 w-96 shadow-xl">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="car3.jpg" alt="Car" className="h-80" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Car - 1</h2>
+          <p>Klick below to get inform for this car</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
           </div>
@@ -21,14 +22,11 @@ export default function Card() {
 
       <div className="card card-compact bg-base-100 w-96 shadow-xl">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="car1.jpg" alt="Car" className="h-80" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Car - 2</h2>
+          <p>Klick below to get inform for this car</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
           </div>
@@ -37,14 +35,11 @@ export default function Card() {
 
       <div className="card card-compact bg-base-100 w-96 shadow-xl">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="car2.jpg" alt="Car" className="h-80" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Car -3</h2>
+          <p>Klick below to get inform for this car</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
           </div>
