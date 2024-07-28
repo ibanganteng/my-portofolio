@@ -20,15 +20,15 @@ export default function Projects() {
           </div>
           <div className="card bg-white shadow-md p-4">
             <img
-              src="/project2.jpg"
+              src="/babyWonder.png"
               alt="Project 2"
               className="w-full h-48 object-cover"
             />
-            <h3 className="font-bold mt-4">Project 2</h3>
+            <h3 className="font-bold mt-4">Baby Wonder</h3>
             <p>Description of project 2.</p>
-            <a href="#" className="btn btn-primary mt-4">
+            <Link href="/project2" className="btn btn-primary mt-4">
               View Project
-            </a>
+            </Link>
           </div>
           <div className="card bg-white shadow-md p-4">
             <img

@@ -1,30 +1,60 @@
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import React from "react";
 
 export default function Hero() {
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset;
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        setIsScrollingUp(false);
+      } else {
+        // Scrolling up
+        setIsScrollingUp(true);
+      }
+      setLastScrollTop(currentScrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
     <>
-      <nav className="p-4 md:p-8 navbar fixed top-0 left-0 right-0 z-10 bg-transparent">
+      <nav
+        className={`p-4 md:p-8 navbar fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ${
+          isScrollingUp ? "transform-none" : "-translate-y-full"
+        } bg-transparent`}
+      >
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white text-lg md:text-xl font-bold">My Car</div>
+          <div className="text-white md:text-4xl sm:text-xxl font-bold">
+            My Car
+          </div>
           <ul className="flex space-x-4 md:space-x-6">
             <li>
-              <a href="/project1" className="text-white text-sm md:text-base">
+              <a href="/project1" className="text-white md:text-2xl ">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="text-white text-sm md:text-base">
+              <a href="#about" className="text-white md:text-2xl ">
                 About
               </a>
             </li>
             <li>
-              <a href="#service" className="text-white text-sm md:text-base">
+              <a href="#service" className="text-white md:text-2xl ">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="text-white text-sm md:text-base">
+              <a href="#" className="text-white md:text-2xl">
                 Contact
               </a>
             </li>
