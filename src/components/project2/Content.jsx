@@ -34,7 +34,9 @@ export default function Content() {
       </div>
       <div className="h-50 w-45 rounded-md bg-[url('https://media.istockphoto.com/id/1497178369/photo/group-of-girls-laughing-together-in-a-studio.webp?b=1&s=170667a&w=0&k=20&c=5_a8iyrhmLbgPvNRjfgdcv7QiS0cdddEF6IhqeZM-bk=')] sm:bg-contain bg-no-repeat bg-center bg-[#A7C6D9]   sm:col-span-7">
         <div className="flex flex-col justify-between items-start mt-8 ml-12 h-[100px]">
-          <h1 className="text-black text-left text-2xl">GET ALL YOU NEED</h1>
+          <h1 className="text-white text-left text-2xl">
+            BEST FRIEND BEST STYLE
+          </h1>
           <Link className="hover:text-white hover:underline" href="#">
             SHOP NOW
           </Link>

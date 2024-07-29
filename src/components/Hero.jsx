@@ -50,10 +50,11 @@ export default function Hero() {
       className="bg-slate-200 text-black py-20 bg-cover bg-center min-h-screen flex flex-col justify-center border-none"
       style={{ backgroundImage: "url('/bgt.png')" }}
     >
-      <div className="container mx-auto h-full sm:flex sm:items-center">
-        <div className="text-left w-full md:w-2/3 lg:w-1/2 px-10 mr-20">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            Hello! I'm{" "}
+      <div className="container mx-auto h-full grid sm:grid-cols-2 sm:items-center">
+        <div className="text-left w-full md:w-2/3 lg:w-1/2 m-20 ">
+          <h1 className="text-3xl sm:text-3xl font-bold">
+            Hello! I'm {""}
+            <br></br>
             <span
               className="bg-gradient-to-r from-blue-400 to-[#a2a2c5] text-white"
               style={{ minWidth: "280px" }}
@@ -62,8 +63,10 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-2 text-2xl flex-wrap">
-            Experienced in building web applications with a strong background in
-            various technologies.
+            Experienced in building web <br />
+            applications with a strong <br />
+            background in various <br />
+            technologies.
           </p>
           <button
             className="mt-6 btn bg-[#2E2E5C] text-white"
