@@ -1,26 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import { dresses, jeans, officess, cloting } from "./data";
 
 function Store() {
+  const [selectedCategory, setSelectedCategory] = useState("cloting");
+
+  function handleDressIsOpen() {
+    setSelectedCategory("dress");
+  }
+
+  function handleJeansIsOpen() {
+    setSelectedCategory("jeans");
+  }
+  function handleOfficeIsOpen() {
+    setSelectedCategory("office");
+  }
+  function handleClotingIsOpen() {
+    setSelectedCategory("cloting");
+  }
+
   return (
-    <div className="m-10 p-10 ">
+    <div className="m-10 p-10" id="shop">
       <h1 className="sm:text-5xl">BEST SELLER</h1>
-      <div className="grid sm:grid-cols-2   ">
-        <div className="mt-4  grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-1 sm:max-h-9">
-          <button className=" border-4 text-black sm:p-2 sm:mr-2 block">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 sm:max-h-9 gap-4 mb-10 ">
+          <button
+            onClick={handleClotingIsOpen}
+            className="border-4 text-black sm:p-2 sm:mr-2 block"
+          >
             CLOTHING
           </button>
-          <button className="border-4 text-black sm:p-2 sm:mr-4 ml-2 ">
+          <button
+            onClick={handleDressIsOpen}
+            className="border-4 text-black sm:p-2 sm:mr-4 ml-2"
+          >
             DRESS
           </button>
-          <button className="border-4 text-black sm:p-2 sm:mr-4 ml-2">
+          <button
+            onClick={handleJeansIsOpen}
+            className="border-4 text-black sm:p-2 sm:mr-4 ml-2"
+          >
             JEANS
           </button>
-          <button className="border-4 text-black sm:p-2 sm:mr-4 ml-2">
+          <button
+            onClick={handleOfficeIsOpen}
+            className="border-4 text-black sm:p-2 sm:mr-4 ml-2"
+          >
             OFFICESS
           </button>
         </div>
         <div>
-          <p className="text-left sm:m-0 m-4">
+          <p className="text-left sm:m-0 sm:mb-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
             euismod, magna a molestie consectetur, nibh elit cursus magna, vel
             fermentum libero justo ac risus. Quisque purus metus, sodales at
@@ -33,64 +62,99 @@ function Store() {
           </p>
         </div>
       </div>
-
-      <div className="grid sm:grid-cols-4 grid-cols-2 gap-4 mt-8 " id="shop">
-        <div className="max-w-65 max-h-65 sm:mt-0 mt-8 ">
-          <img
-            src="https://dynamic.zacdn.com/TdOQlH1hH2_L55jEgCjf8QyKg-M=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/adidas-1374-6358883-2.jpg"
-            alt=""
-            className="w-full h-full rounded-lg bg-red-300"
-          />
-          <div>
-            <div className="flex justify-between">
-              <h1 className="text-2xl">ADIDAS</h1>
-              <h1 className="text-2xl">$80,25</h1>
-            </div>
-            <p>jacquard Jersey Dress</p>
+      <div>
+        {selectedCategory == "cloting" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+            {cloting.map((clot, index) => (
+              <div key={index}>
+                <div className="max-w-65 max-h-65 sm:mt-0 mt-8">
+                  <img
+                    src={clot.imgUrl}
+                    alt=""
+                    className="w-full h-full rounded-lg bg-red-300"
+                  />
+                  <div>
+                    <div className="flex justify-between m-5">
+                      <h1 className="sm:text-4xl">{clot.name}</h1>
+                      <h1 className="sm:text-4xl">{clot.price}</h1>
+                    </div>
+                    <p className="m-5">{clot.des}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="max-w-65 max-h-65 sm:mt-0 mt-8">
-          <img
-            src="https://dynamic.zacdn.com/id43qQJjMl48vpt_0QeLMbyjp7U=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/adidas-5624-9044044-2.jpg"
-            alt=""
-            className="w-full h-full rounded-lg bg-red-300"
-          />
-          <div>
-            <div className="flex justify-between">
-              <h1 className="text-2xl">ADIDAS</h1>
-              <h1 className="text-2xl">$70,25</h1>
-            </div>
-            <p>Sport Wear</p>
+        )}
+      </div>
+      <div>
+        {selectedCategory === "dress" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+            {dresses.map((dress, index) => (
+              <div key={index}>
+                <div className="max-w-65 max-h-65 sm:mt-0 mt-8">
+                  <img
+                    src={dress.imgUrl}
+                    alt=""
+                    className="w-full h-full rounded-lg bg-red-300"
+                  />
+                  <div>
+                    <div className="flex justify-between m-5">
+                      <h1 className="sm:text-4xl">{dress.name}</h1>
+                      <h1 className="sm:text-4xl">{dress.price}</h1>
+                    </div>
+                    <p className="m-5">{dress.des}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="max-w-65 max-h-65 sm:mt-0 mt-10">
-          <img
-            src="https://dynamic.zacdn.com/7HKAGCHAU0bS1bxmgmLY59haszc=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/jacqueline-de-yong-7211-3348644-2.jpg"
-            alt=""
-            className="w-full h-full rounded-lg bg-red-300"
-          />
-          <div>
-            <div className="flex justify-between">
-              <h1 className="text-2xl">JACQUELINE DEYOUNG</h1>
-              <h1 className="text-2xl">$90,25</h1>
-            </div>
-            <p>Divya Short Sleves Dress</p>
+        )}
+        {selectedCategory === "jeans" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+            {jeans.map((jean, index) => (
+              <div key={index}>
+                <div className="max-w-65 max-h-65 sm:mt-0 mt-8">
+                  <img
+                    src={jean.imgUrl}
+                    alt=""
+                    className="w-full h-full rounded-lg bg-red-300"
+                  />
+                  <div>
+                    <div className="flex justify-between m-5">
+                      <h1 className="sm:text-4xl">{jean.name}</h1>
+                      <h1 className="sm:text-4xl">{jean.price}</h1>
+                    </div>
+                    <p className="m-5">{jean.des}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="max-w-65 max-h-65 sm:mt-0 mt-10">
-          <img
-            src="https://dynamic.zacdn.com/MwzDPwBQ_Bf_1GWuN9ilkNKgkr8=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/trendyol-8189-8996344-2.jpg"
-            alt=""
-            className="w-full h-full rounded-lg bg-red-300"
-          />
-          <div>
-            <div className="flex justify-between">
-              <h1 className="text-2xl">TRENDYOL</h1>
-              <h1 className="text-2xl">$100,25</h1>
-            </div>
-            <p>Shirred Midi Dress</p>
+        )}
+      </div>
+      <div>
+        {selectedCategory === "office" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  ">
+            {officess.map((office, index) => (
+              <div key={index}>
+                <div className="max-w-65 max-h-65 sm:mt-0 mt-8">
+                  <img
+                    src={office.imgUrl}
+                    alt=""
+                    className="w-full h-full rounded-lg bg-red-300 "
+                  />
+                  <div>
+                    <div className="flex justify-between m-5">
+                      <h1 className="sm:text-4xl">{office.name}</h1>
+                      <h1 className="sm:text-4xl">{office.price}</h1>
+                    </div>
+                    <p className="m-5">{office.des}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

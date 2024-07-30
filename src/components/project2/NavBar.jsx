@@ -6,7 +6,7 @@ export default function NavBar() {
     <div className="py-5 px-10">
       <div className="flex justify-around">
         <h1 className="md:text-4xl text-2xl  hover:underline sm:mr-0 mr-5">
-          STYLE
+          <Link href="/">STYLE</Link>
         </h1>
 
         <div className="flex gap-6 ">
@@ -18,9 +18,6 @@ export default function NavBar() {
           </Link>
           <Link href="#" className="md:text-3xl  hover:underline">
             Women
-          </Link>
-          <Link href="#" className="md:text-3xl  hover:underline">
-            Kids
           </Link>
         </div>
       </div>

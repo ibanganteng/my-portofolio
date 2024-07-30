@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Story() {
   return (
-    <div className="m-10 grid gap-4  sm:grid-cols-2   ">
+    <div className="m-10 grid gap-4  md:grid-cols-2   ">
       <div className="  min-h-[100px] rounded-lg shadow ">
         <h1 className="text-8xl text-wrap">GET YOURSELF INTO THE RIGHT</h1>
       </div>
