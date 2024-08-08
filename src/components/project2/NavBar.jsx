@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NavBar() {
   return (
-    <div className="py-5 px-10">
+    <div className="py-5 px-10 ">
       <div className="flex justify-around">
         <h1 className="md:text-4xl text-2xl  hover:underline sm:mr-0 mr-5">
           <Link href="/">STYLE</Link>

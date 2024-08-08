@@ -7,8 +7,8 @@ export default function Story() {
         <div className="sm:col-span-3 "></div>
         <div className="sm:col-span-9 my-10">
           <h1 className=" text-2xl sm:text-7xl text-wrap">
-            With zero emissions and advanced technology,our electrict cars are
-            paving the way towards a greener future.
+            With zero emissions and advanced technology,our cars are paving the
+            way towards a greener future.
             <span className="text-gray-500">
               Join ud we drive towards a cleaner,more sustainable tumorrow
             </span>
