@@ -1,19 +1,16 @@
-import Card from "@/components/project1/card";
-import Data from "@/components/project1/Data";
-import Footer from "@/components/project1/Footer";
-import Hero2 from "@/components/project1/Footer";
-import Carousel from "@/components/project1/project1Carousel";
 import Hero from "@/components/project1/project1Hero";
+import Story from "@/components/project1/Story";
 import React from "react";
+import Guide from "@/components/project1/Guide";
+import Card from "@/components/project1/card";
 
 export default function page() {
   return (
     <div className="max-w-full overflow-x-hidden">
       <Hero />
-      <Data />
-      <Carousel />
+      <Story />
+      <Guide />
       <Card />
-      <Footer />
     </div>
   );
 }

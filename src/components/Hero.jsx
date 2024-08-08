@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Skills from "./Skills";
+import Link from "next/link";
 
 // const PDF_FILE_URL = "/file_pdf.pdf";
 
@@ -48,8 +49,8 @@ export default function Hero() {
   return (
     <section className="bg-white text-black py-20 bg-cover bg-center min-h-screen flex flex-col justify-center border-none">
       <div className="container mx-auto h-full grid sm:grid-cols-2 sm:items-center">
-        <div className="text-left w-full md:w-2/3 lg:w-1/2 m-20 ">
-          <h1 className="text-2xl sm:text-7xl font-bold">
+        <div className="text-left w-full md:w-2/3 lg:w-1/2 mr-30 pl-10 ">
+          <h1 className="text-2xl sm:text-5xl font-bold ">
             Hello! I'm {""}
             <br></br>
             <span
@@ -69,10 +70,10 @@ export default function Hero() {
             className="mt-6 btn bg-[#2E2E5C] text-white"
             // onClick={() => downloadFileURL(PDF_FILE_URL)}
           >
-            Click for MY CV
+            <Link href={"#contact"}> Contact me</Link>
           </button>
         </div>
-        <div className="ml-20">
+        <div className="">
           <img src="/ibang.png" alt="" width={500} height={500} />
         </div>
       </div>

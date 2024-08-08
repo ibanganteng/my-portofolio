@@ -126,16 +126,16 @@ export const Personal = [
   {
     imgUrl: "/serMandiri.png",
     name: "sertifikat intern Mandiri Bank",
-    des: "dsadasdas",
+    des: "I am proud to have completed an internship at Bank Mandiri, where I honed my skills in data retrieval and API technology. This experience, culminating in a certification, significantly enhanced my understanding of data applications in finance, preparing me for future challenges in the industry.",
   },
   {
     imgUrl: "/rakamin.png",
     name: "Rakamin Academy",
-    des: "dadadada",
+    des: "I am proud to have completed a comprehensive full-stack web development course at Rakamin Academy, where I mastered skills in front-end, back-end, database management, and UI/UX design. This certification affirms my ability to create robust and user-friendly websites, setting a strong foundation for my career in tech.",
   },
   {
     imgUrl: "/toefl.png",
-    name: "My Toefl",
-    des: "dadadada",
+    name: "TOEFL",
+    des: "I am delighted to have achieved the highest TOEFL score at ILP, confirming my proficiency in English. This certification is a testament to my dedication and understanding of the language, preparing me for global communication and enhancing my professional opportunities.",
   },
 ];
