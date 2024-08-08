@@ -8,7 +8,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div>
+    <div className="max-w-full overflow-x-hidden">
       <Hero />
       <Data />
       <Carousel />

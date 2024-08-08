@@ -13,7 +13,7 @@ const HeroSection = () => {
 
       {/* Hero text */}
       <div className="relative z-10 bg-white shadow-lg mx-auto p-4 max-w-2xl">
-        <h1 className="text-8xl">
+        <h1 className="text-4xl sm:text-8xl">
           WE CREATE LIMITLESS STYLES BY BLENDING OUR PRODUCT RANGE, FROM
           INTERNATIONAL PRODUCTS TO COVETED LOCAL PRODUCTS.
         </h1>

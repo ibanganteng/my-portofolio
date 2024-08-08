@@ -13,7 +13,7 @@ import Footer2 from "@/components/project2/Footer2";
 
 export default function page() {
   return (
-    <div>
+    <div className="max-w-full overflow-x-hidden">
       <NavBar />
       <hr className="border-0 h-1 bg-gray-800 my-4" />
       <Story />

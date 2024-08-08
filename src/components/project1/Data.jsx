@@ -72,7 +72,7 @@ function Data() {
           ))}
         </div>
       </div>
-      <h1 className="text-7xl text-center text-gradient-to-r from-[#4E5F4F] to-[#e6e4dd] underline decoration-black pt-8">
+      <h1 className="text-7xl text-center underline decoration-black pt-8">
         JELASKAN DIRIMU LEWAT MOBIL
       </h1>
     </div>

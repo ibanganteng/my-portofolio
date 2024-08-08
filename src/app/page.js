@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
 import Project from "@/components/Project";
 import Contact from "@/components/Contact";
-import About from "@/components/About";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
@@ -17,9 +16,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      <main>
+      <main className="max-w-full overflow-x-hidden">
         <Hero />
 
+        <AboutMe />
         <Project />
         <Contact />
       </main>

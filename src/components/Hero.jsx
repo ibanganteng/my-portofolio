@@ -46,17 +46,14 @@ export default function Hero() {
   // };
 
   return (
-    <section
-      className="bg-slate-200 text-black py-20 bg-cover bg-center min-h-screen flex flex-col justify-center border-none"
-      style={{ backgroundImage: "url('/bgt.png')" }}
-    >
+    <section className="bg-white text-black py-20 bg-cover bg-center min-h-screen flex flex-col justify-center border-none">
       <div className="container mx-auto h-full grid sm:grid-cols-2 sm:items-center">
         <div className="text-left w-full md:w-2/3 lg:w-1/2 m-20 ">
-          <h1 className="text-3xl sm:text-3xl font-bold">
+          <h1 className="text-2xl sm:text-7xl font-bold">
             Hello! I'm {""}
             <br></br>
             <span
-              className="bg-gradient-to-r from-blue-400 to-[#a2a2c5] text-white"
+              className="bg-[#2E2E5C] text-white"
               style={{ minWidth: "280px" }}
             >
               {typedText}

@@ -121,3 +121,21 @@ export const cloting = [
     price: "$50",
   },
 ];
+
+export const Personal = [
+  {
+    imgUrl: "/serMandiri.png",
+    name: "sertifikat intern Mandiri Bank",
+    des: "dsadasdas",
+  },
+  {
+    imgUrl: "/rakamin.png",
+    name: "Rakamin Academy",
+    des: "dadadada",
+  },
+  {
+    imgUrl: "/toefl.png",
+    name: "My Toefl",
+    des: "dadadada",
+  },
+];

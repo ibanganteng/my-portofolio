@@ -75,8 +75,8 @@ function Store() {
                   />
                   <div>
                     <div className="flex justify-between m-5">
-                      <h1 className="sm:text-4xl">{clot.name}</h1>
-                      <h1 className="sm:text-4xl">{clot.price}</h1>
+                      <h1 className="sm:text-3xl">{clot.name}</h1>
+                      <h1 className="sm:text-3xl">{clot.price}</h1>
                     </div>
                     <p className="m-5">{clot.des}</p>
                   </div>
@@ -121,8 +121,8 @@ function Store() {
                   />
                   <div>
                     <div className="flex justify-between m-5">
-                      <h1 className="sm:text-4xl">{jean.name}</h1>
-                      <h1 className="sm:text-4xl">{jean.price}</h1>
+                      <h1 className="sm:text-3xl">{jean.name}</h1>
+                      <h1 className="sm:text-2xl">{jean.price}</h1>
                     </div>
                     <p className="m-5">{jean.des}</p>
                   </div>

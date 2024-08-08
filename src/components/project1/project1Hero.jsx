@@ -62,7 +62,7 @@ export default function Hero() {
         </div>
       </nav>
 
-      <div className="hero bg-base-200 min-h-screen bg-[url('/car.jpg')] bg-cover bg-center flex items-center justify-center">
+      <div className="hero bg-base-200 w-full min-h-screen  bg-[url('/car.jpg')] sm:bg-cover bg-center flex items-center justify-center">
         <div className="text-start px-4 md:px-8 lg:px-16">
           <div className="max-w-md md:max-w-lg lg:max-w-xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white font-serif whitespace-nowrap">

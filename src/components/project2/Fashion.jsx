@@ -5,8 +5,8 @@ export default function Fashion() {
   return (
     <div>
       <div className="md:flex justify-between m-20">
-        <h1 className="text-9xl underline">Couple Fashion</h1>
-        <Link href="#shop" className="text-4xl underline mt-8">
+        <h1 className="text-5xl underline mb-5">Couple Fashion</h1>
+        <Link href="#shop" className="text-2xl underline mt-8">
           ShopNow
         </Link>
       </div>

@@ -5,7 +5,9 @@ export default function Story() {
   return (
     <div className="m-10 grid gap-4  md:grid-cols-2   ">
       <div className="  min-h-[100px] rounded-lg shadow ">
-        <h1 className="text-8xl text-wrap">GET YOURSELF INTO THE RIGHT</h1>
+        <h1 className="text-6xl sm:text-8xl text-wrap">
+          GET YOURSELF INTO THE RIGHT
+        </h1>
       </div>
       <div className="min-h-[100px] rounded-lg shadow   ">
         <p className="p-8 text-left ">
