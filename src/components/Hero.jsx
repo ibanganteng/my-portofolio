@@ -48,11 +48,15 @@ export default function Hero() {
 
   return (
     <section className="bg-white text-black py-20 bg-cover bg-center min-h-screen flex flex-col justify-center border-none">
-      <div className="container mx-auto h-full grid sm:grid-cols-2 sm:items-center">
-        <div className="text-left w-full md:w-2/3 lg:w-1/2  sm:pl-20 pl-10 ">
-          <h1 className="text-2xl sm:text-5xl font-bold ">
+      <div className="container mx-auto h-full grid sm:grid-cols-2 sm:items-center mb-10">
+        {/* Move the image to the top on smaller screens */}
+        <div className="order-1 sm:order-2 ml-0 sm:ml-20">
+          <img src="/ibang.png" alt="" width={500} height={500} />
+        </div>
+        <div className="order-2 sm:order-1 text-left w-full md:w-2/3 lg:w-1/2 sm:pl-20 pl-10 mb-1.5 sm:mb-10">
+          <h1 className="text-2xl sm:text-5xl font-bold">
             Hello! I'm {""}
-            <br></br>
+            <br />
             <span
               className="bg-[#2E2E5C] text-white"
               style={{ minWidth: "280px" }}
@@ -60,21 +64,15 @@ export default function Hero() {
               {typedText}
             </span>
           </h1>
-          <p className="mt-2 text-2xl flex-wrap">
+          <p className="mt-2 text-3xl flex-wrap">
             Experienced in building web applications with a strong background in
             various technologies.
           </p>
-          <button
-            className="mt-6  text-white"
-            // onClick={() => downloadFileURL(PDF_FILE_URL)}
-          >
+          <button className="mt-6 text-white">
             <Link href={"#contact"} className="btn btn-primary">
               Contact me
             </Link>
           </button>
-        </div>
-        <div className="ml-0 sm:ml-20">
-          <img src="/ibang.png" alt="" width={500} height={500} />
         </div>
       </div>
       <Skills />
