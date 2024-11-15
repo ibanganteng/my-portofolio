@@ -22,6 +22,19 @@ function Store() {
     <div className="m-10 p-10" id="shop">
       <h1 className="sm:text-5xl">BEST SELLER</h1>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-10">
+        <div>
+          <p className="text-left sm:m-0 sm:mb-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            euismod, magna a molestie consectetur, nibh elit cursus magna, vel
+            fermentum libero justo ac risus. Quisque purus metus, sodales at
+            vestibulum vel, congue sit amet lacus. Sed nec dictum eros. Fusce ac
+            nibh eget libero sollicitudin faucibus. Mauris vitae ornare risus.
+            Mauris rhoncus, sapien non consequat convallis, dui diam volutpat
+            sem, quis luctus elit nunc non augue. Duis sed justo in felis congue
+            rhoncus. Etiam sed hendrerit magna, nec imperdiet est. Praesent id
+            enim vitae odio blandit dapibus sit amet et dolor."
+          </p>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 sm:max-h-9 gap-4 mb-10 ">
           <button
             onClick={handleClotingIsOpen}
@@ -47,19 +60,6 @@ function Store() {
           >
             OFFICESS
           </button>
-        </div>
-        <div>
-          <p className="text-left sm:m-0 sm:mb-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            euismod, magna a molestie consectetur, nibh elit cursus magna, vel
-            fermentum libero justo ac risus. Quisque purus metus, sodales at
-            vestibulum vel, congue sit amet lacus. Sed nec dictum eros. Fusce ac
-            nibh eget libero sollicitudin faucibus. Mauris vitae ornare risus.
-            Mauris rhoncus, sapien non consequat convallis, dui diam volutpat
-            sem, quis luctus elit nunc non augue. Duis sed justo in felis congue
-            rhoncus. Etiam sed hendrerit magna, nec imperdiet est. Praesent id
-            enim vitae odio blandit dapibus sit amet et dolor."
-          </p>
         </div>
       </div>
       <div>

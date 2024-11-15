@@ -1,19 +1,20 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { FaBars } from "react-icons/fa"; // Import FaBars icon
 
 export default function Hero() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null); // Ref for the nav menu
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = window.pageYOffset;
       if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
         setIsScrollingUp(false);
       } else {
-        // Scrolling up
         setIsScrollingUp(true);
       }
       setLastScrollTop(currentScrollTop);
@@ -21,44 +22,64 @@ export default function Hero() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Function to check if click is outside the menu
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false); // Close menu if click outside
+      }
+    };
+
+    // Listen for clicks to close menu
+    if (isOpen) {
+      window.addEventListener("click", handleClickOutside);
+    }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleClickOutside);
     };
-  }, [lastScrollTop]);
+  }, [lastScrollTop, isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
       <nav
-        className={`p-4 md:p-8 navbar fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ${
+        className={`p-4 md:p-8 fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ${
           isScrollingUp ? "transform-none" : "-translate-y-full"
         } bg-transparent`}
+        ref={navRef} // Set ref for the nav
       >
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white md:text-4xl sm:text-xxl font-bold">
             My Car
           </div>
-          <ul className="flex space-x-4 md:space-x-6">
-            <li>
-              <a href="/project1" className="text-white md:text-2xl ">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="text-white md:text-2xl ">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#service" className="text-white md:text-2xl ">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white md:text-2xl">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-white text-2xl"
+          >
+            <FaBars />
+          </button>
+          <div
+            className={`md:flex ${
+              isOpen ? "flex" : "hidden"
+            } flex-col md:flex-row md:space-x-4 absolute sm:top-6 top-full right-3 sm:right-20 bg-transparent md:bg-transparent w-full md:w-auto text-right`}
+          >
+            <a href="/project1" className="text-white md:text-2xl mt-2 md:mt-0">
+              Home
+            </a>
+            <a href="#about" className="text-white md:text-2xl mt-2 md:mt-0">
+              About
+            </a>
+            <a href="#service" className="text-white md:text-2xl mt-2 md:mt-0">
+              Services
+            </a>
+            <a href="#" className="text-white md:text-2xl mt-2 md:mt-0">
+              Contact
+            </a>
+          </div>
         </div>
       </nav>
 

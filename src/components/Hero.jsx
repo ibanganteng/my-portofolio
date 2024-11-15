@@ -64,7 +64,7 @@ export default function Hero() {
               {typedText}
             </span>
           </h1>
-          <p className="mt-2 text-3xl flex-wrap">
+          <p className="sm:mt-10 mt-3 sm:text-5xl text-3xl text-left flex-wrap">
             Experienced in building web applications with a strong background in
             various technologies.
           </p>
